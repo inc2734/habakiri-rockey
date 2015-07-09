@@ -1,0 +1,25 @@
+/**
+ * .entry-content
+ */
+.single, .page {
+	#main {
+		> article {
+			background-color: #fff;
+			border: 8px solid #c25858;
+			padding: 20px;
+
+			@media ( min-width: 992px ) {
+				padding: 30px;
+			}
+		}
+	}
+}
+
+.page-template-front-page {
+	#main {
+		> article {
+			border: none;
+			padding: 0;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+/**
+ * .bread-crumb
+ */
+.bread-crumb {
+	background-color: #fff;
+	border: 8px solid #c25858;
+	padding: 10px 20px;
+
+	@media ( min-width: 992px ) {
+		padding: 10px 30px;
+	}
+}
