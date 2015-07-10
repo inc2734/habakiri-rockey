@@ -128,9 +128,10 @@ class Habakiri_Rockey {
 			'page_header_text_color' => '#fff',
 			'link_color'             => '#276989',
 			'link_hover_color'       => '#276989',
-			'gnav_link_color'        => '#333',
-			'gnav_link_hover_color'  => '#333',
-			'header_bg_color'        => '#fff',
+			'gnav_link_color'        => '#fff',
+			'gnav_link_hover_color'  => '#fff',
+			'logo_text_color'        => '#fff',
+			'header_bg_color'        => '#bf0a19',
 			'footer_bg_color'        => '#222',
 			'footer_text_color'      => '#fff',
 			'footer_link_color'      => '#fff',
@@ -144,7 +145,7 @@ class Habakiri_Rockey {
 	 * @return string
 	 */
 	public function theme_mod_header_bg_color( $mod ) {
-		return '#fff';
+		return '#bf0a19';
 	}
 
 	/**
@@ -153,10 +154,6 @@ class Habakiri_Rockey {
 	 * @param WP_Customizer $wp_customize
 	 */
 	public function customize_register( $wp_customize ) {
-		/*
-		$wp_customize->remove_control( 'header' );
-		$wp_customize->remove_control( 'header_fixed' );
-		*/
 		$wp_customize->remove_control( 'header_bg_color' );
 	}
 }
