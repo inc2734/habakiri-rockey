@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name: Rockey - Habakiri design skin
- * Plugin URI: https://github.com/inc2734/habakiri-rockey
- * Description: Rockey is a design skin of Habakiri.
+ * Plugin Name: Rocky - Habakiri design skin
+ * Plugin URI: https://github.com/inc2734/habakiri-rocky
+ * Description: Rocky is a design skin of Habakiri.
  * Version: 1.0.0
  * Author: Takashi Kitajima
  * Author URI: http://2inc.org
  * Created : July 9, 2015
  * Modified: 
- * Text Domain: habakiri-rockey
+ * Text Domain: habakiri-rocky
  * Domain Path: /languages/
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -22,9 +22,9 @@ define( 'HABAKIRI_DESIGN_SKIN', true );
 
 include_once( plugin_dir_path( __FILE__ ) . 'classes/class.config.php' );
 include_once( plugin_dir_path( __FILE__ ) . 'classes/class.github-updater.php' );
-new habakiri_Plugin_GitHub_Updater( 'habakiri-rockey', __FILE__, 'inc2734' );
+new habakiri_Plugin_GitHub_Updater( 'habakiri-rocky', __FILE__, 'inc2734' );
 
-class Habakiri_Rockey {
+class Habakiri_Rocky {
 
 	public function __construct() {
 		add_action( 'plugins_loaded', array( $this, 'plugins_loaded' ) );
@@ -36,7 +36,7 @@ class Habakiri_Rockey {
 	 */
 	public function plugins_loaded() {
 		load_plugin_textdomain(
-			Habakiri_Rockey_Config::NAME,
+			Habakiri_Rocky_Config::NAME,
 			false,
 			basename( dirname( __FILE__ ) ) . '/languages'
 		);
@@ -84,9 +84,9 @@ class Habakiri_Rockey {
 	 * CSS の読み込み
 	 */
 	public function wp_enqueue_scripts() {
-		$url = plugins_url( Habakiri_Rockey_Config::NAME );
+		$url = plugins_url( Habakiri_Rocky_Config::NAME );
 		wp_enqueue_style(
-			Habakiri_Rockey_Config::NAME,
+			Habakiri_Rocky_Config::NAME,
 			$url . '/style.min.css',
 			array( 'habakiri' )
 		);
@@ -158,4 +158,4 @@ class Habakiri_Rockey {
 	}
 }
 
-$Habakiri_Rockey = new Habakiri_Rockey();
+$Habakiri_Rocky = new Habakiri_Rocky();

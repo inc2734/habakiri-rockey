@@ -1,10 +1,10 @@
-# Copyright (C) 2015 Rockey - Habakiri design skin
-# This file is distributed under the same license as the Rockey - Habakiri design skin package.
+# Copyright (C) 2015 Rocky - Habakiri design skin
+# This file is distributed under the same license as the Rocky - Habakiri design skin package.
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Rockey - Habakiri design skin 1.0.0\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/habakiri-rockey\n"
+"Project-Id-Version: Rocky - Habakiri design skin 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/habakiri-rocky\n"
 "POT-Creation-Date: 2015-07-09 17:11+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,15 +18,15 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #. Plugin Name of the plugin/theme
-msgid "Rockey - Habakiri design skin"
+msgid "Rocky - Habakiri design skin"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://github.com/inc2734/habakiri-rockey"
+msgid "https://github.com/inc2734/habakiri-rocky"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Rockey is a design skin of Habakiri."
+msgid "Rocky is a design skin of Habakiri."
 msgstr ""
 
 #. Author of the plugin/theme

@@ -1,4 +1,4 @@
-=== Rockey ===
+=== Rocky ===
 Contributors: Takashi Kitajima
 Donate link: http://www.amazon.co.jp/registry/wishlist/39ANKRNSTNW40
 Requires at least: 4.1
@@ -9,11 +9,11 @@ License URI: license.txt
 
 == Description ==
 
-Rockey is a design skin of Habakiri.
+Rocky is a design skin of Habakiri.
 
 == Installation ==
 
-1. Upload `Rockey` to the `/wp-content/plugins/` directory
+1. Upload `Rocky` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
