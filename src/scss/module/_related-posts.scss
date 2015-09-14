@@ -1,16 +1,13 @@
-/**
- * .related-posts
- */
 .related-posts {
-	h2 {
+	&__title {
 		color: #fff;
 	}
+}
 
-	.entries {
-		.hentry {
-			background-color: transparent;
-			border: none;
-			padding: 0;
-		}
+.entries--related-posts {
+	.article--summary {
+		background-color: transparent;
+		border: none;
+		padding: 0;
 	}
 }

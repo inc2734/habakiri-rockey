@@ -56,25 +56,9 @@ class Habakiri_Rocky {
 			array( $this, 'mce_css' )
 		);
 
-		add_filter(
-			'habakiri_post_thumbnail_size',
-			array( $this, 'habakiri_post_thumbnail_size' )
-		);
-
 		add_action(
 			'wp_enqueue_scripts',
 			array( $this, 'wp_enqueue_scripts' )
-		);
-
-		add_filter(
-			'theme_mod_header_bg_color',
-			array( $this, 'theme_mod_header_bg_color' )
-		);
-
-		add_action(
-			'customize_register',
-			array( $this, 'customize_register' ),
-			99999
 		);
 
 		remove_theme_support( 'custom-background' );
@@ -107,16 +91,6 @@ class Habakiri_Rocky {
 	}
 
 	/**
-	 * サムネイルサイズ
-	 *
-	 * @param string $size
-	 * @return string
-	 */
-	public function habakiri_post_thumbnail_size( $size ) {
-		return 'medium';
-	}
-
-	/**
 	 * デフォルトのテーマオプションを定義して返す
 	 *
 	 * @param array $args
@@ -124,37 +98,23 @@ class Habakiri_Rocky {
 	 */
 	public function habakiri_theme_mods_defaults( $args ) {
 		return shortcode_atts( $args, array(
-			'page_header_bg_color'   => '#bf0a19',
-			'page_header_text_color' => '#fff',
-			'link_color'             => '#276989',
-			'link_hover_color'       => '#276989',
-			'gnav_link_color'        => '#fff',
-			'gnav_link_hover_color'  => '#fff',
-			'logo_text_color'        => '#fff',
-			'header_bg_color'        => '#bf0a19',
-			'footer_bg_color'        => '#222',
-			'footer_text_color'      => '#fff',
-			'footer_link_color'      => '#fff',
+			'page_header_bg_color'       => '#bf0a19',
+			'page_header_text_color'     => '#fff',
+			'link_color'                 => '#276989',
+			'link_hover_color'           => '#276989',
+			'gnav_link_color'            => '#fff',
+			'gnav_link_hover_color'      => '#fff',
+			'gnav_link_bg_color'         => '#bf0a19',
+			'gnav_link_bg_hover_color'   => '#bf0a19',
+			'gnav_sub_label_color'       => '#fff',
+			'gnav_sub_label_hover_color' => '#fff',
+			'logo_text_color'            => '#fff',
+			'header_bg_color'            => '#bf0a19',
+			'gnav_bg_color'              => '#bf0a19',
+			'footer_bg_color'            => '#222',
+			'footer_text_color'          => '#fff',
+			'footer_link_color'          => '#fff',
 		) );
-	}
-
-	/**
-	 * ヘッダーの背景色
-	 *
-	 * @param string $mod
-	 * @return string
-	 */
-	public function theme_mod_header_bg_color( $mod ) {
-		return '#bf0a19';
-	}
-
-	/**
-	 * Customizer の設定
-	 *
-	 * @param WP_Customizer $wp_customize
-	 */
-	public function customize_register( $wp_customize ) {
-		$wp_customize->remove_control( 'header_bg_color' );
 	}
 }
 

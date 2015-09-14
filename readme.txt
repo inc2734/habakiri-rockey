@@ -9,7 +9,7 @@ License URI: license.txt
 
 == Description ==
 
-Rocky is a design skin of Habakiri.
+Rocky is a design skin of Habakiri. This plugin needs Habakiri 2.0.0 or later.
 
 == Installation ==
 
@@ -19,7 +19,9 @@ Rocky is a design skin of Habakiri.
 == Changelog ==
 
 = 2.0.0 =
+* Compatible with Habakiri 2.0.0
 * Update Habakiri_Plugin_GitHub_Updater
+* The color of the header can be customized.
 
 = 1.0.0 =
 * Initial Release

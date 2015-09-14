@@ -1,25 +1,21 @@
-/**
- * .entry-content
- */
-.single, .page {
-	#main {
-		> article {
-			background-color: #fff;
-			border: 8px solid #c25858;
-			padding: 20px;
+.article {
+	&--single,
+	&--page,
+	&--404 {
+		background-color: #fff;
+		border: 8px solid #c25858;
+		padding: 20px;
 
-			@media ( min-width: 992px ) {
-				padding: 30px;
-			}
+		@media ( min-width: 992px ) {
+			padding: 30px;
 		}
 	}
 }
 
-.page-template-front-page {
-	#main {
-		> article {
-			border: none;
-			padding: 0;
-		}
+.page-template-front-page,
+.page-template-rich-front-page {
+	.article--page {
+		border: none;
+		padding: 0;
 	}
 }
