@@ -45,7 +45,7 @@ class Habakiri_Plugin_GitHub_Updater {
 	 */
 	public function __construct( $slug, $path, $user_name ) {
 		if ( defined( 'WP_DEBUG' ) && WP_DEBUG === true ) {
-			delete_site_transient( 'update_plugin' );
+			delete_site_transient( 'update_plugins' );
 		}
 		
 		if ( !function_exists( 'get_plugin_data' ) ){

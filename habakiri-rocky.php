@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Rocky - Habakiri design skin
  * Plugin URI: https://github.com/inc2734/habakiri-rocky
- * Description: Rocky is a design skin of Habakiri.
+ * Description: Rocky is a design skin of Habakiri. This plugin needs Habakiri 2.0.0 or later.
  * Version: 2.0.0
  * Author: Takashi Kitajima
  * Author URI: http://2inc.org
