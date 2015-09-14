@@ -1,18 +1,18 @@
 <?php
-if ( class_exists( 'habakiri_Plugin_GitHub_Updater' ) || !is_admin() ) {
+if ( class_exists( 'Habakiri_Plugin_GitHub_Updater' ) || !is_admin() ) {
 	return;
 }
 
 /**
  * habakiri_Plugin_GitHub_Updater
- * Version    : 1.0.0
+ * Version    : 1.0.1
  * Author     : Takashi Kitajima
  * Created    : June 15, 2015
- * Modified   : 
+ * Modified   : September 14, 2015
  * License    : GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
-class habakiri_Plugin_GitHub_Updater {
+class Habakiri_Plugin_GitHub_Updater {
 
 	/**
 	 * プラグインのディレクトリ名
@@ -72,12 +72,10 @@ class habakiri_Plugin_GitHub_Updater {
 			10,
 			3
 		);
-		/*
-		add_filter(
+		add_action(
 			'site_transient_update_plugins',
 			array( $this, 'site_transient_update_plugins' )
 		);
-		*/
 	}
 
 	/**
@@ -117,6 +115,15 @@ class habakiri_Plugin_GitHub_Updater {
 
 		$transient->response[$slug] = $plugin;
 		return $transient;
+	}
+
+	/**
+	 * 対象のプラグインについて GitHub に問い合わせ、更新があれば $transient を更新
+	 *
+	 * @param object $transient
+	 */
+	public function site_transient_update_plugins( $transient ) {
+		 $this->pre_set_site_transient_update_plugins( $transient );
 	}
 
 	/**
