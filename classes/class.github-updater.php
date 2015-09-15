@@ -5,7 +5,7 @@ if ( class_exists( 'Habakiri_Plugin_GitHub_Updater' ) || !is_admin() ) {
 
 /**
  * habakiri_Plugin_GitHub_Updater
- * Version    : 1.0.1
+ * Version    : 1.0.2
  * Author     : Takashi Kitajima
  * Created    : June 15, 2015
  * Modified   : September 14, 2015
@@ -55,26 +55,23 @@ class Habakiri_Plugin_GitHub_Updater {
 		$this->plugin    = get_plugin_data( $path, false, false );
 		$this->user_name = $user_name;
 
-
 		add_filter(
 			'pre_set_site_transient_update_plugins',
 			array( $this, 'pre_set_site_transient_update_plugins' )
 		);
+		
 		add_filter(
 			'plugins_api',
 			array( $this, 'plugins_api' ),
 			10,
 			3
 		);
+		
 		add_filter(
 			'upgrader_post_install',
 			array( $this, 'upgrader_post_install' ),
 			10,
 			3
-		);
-		add_action(
-			'site_transient_update_plugins',
-			array( $this, 'site_transient_update_plugins' )
 		);
 	}
 
@@ -115,15 +112,6 @@ class Habakiri_Plugin_GitHub_Updater {
 
 		$transient->response[$slug] = $plugin;
 		return $transient;
-	}
-
-	/**
-	 * 対象のプラグインについて GitHub に問い合わせ、更新があれば $transient を更新
-	 *
-	 * @param object $transient
-	 */
-	public function site_transient_update_plugins( $transient ) {
-		 $this->pre_set_site_transient_update_plugins( $transient );
 	}
 
 	/**
