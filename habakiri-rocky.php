@@ -3,11 +3,11 @@
  * Plugin Name: Rocky - Habakiri design skin
  * Plugin URI: https://github.com/inc2734/habakiri-rocky
  * Description: Rocky is a design skin of Habakiri. This plugin needs Habakiri 2.0.0 or later.
- * Version: 2.0.2
+ * Version: 2.1.0
  * Author: Takashi Kitajima
  * Author URI: http://2inc.org
  * Created : July 9, 2015
- * Modified: October 13, 2015
+ * Modified: August 16, 2016
  * Text Domain: habakiri-rocky
  * Domain Path: /languages/
  * License: GPLv2 or later
@@ -21,7 +21,10 @@ if ( defined( 'HABAKIRI_DESIGN_SKIN' ) && get_template() === 'habakiri' ) {
 define( 'HABAKIRI_DESIGN_SKIN', true );
 
 include_once( plugin_dir_path( __FILE__ ) . 'classes/class.config.php' );
-include_once( plugin_dir_path( __FILE__ ) . 'classes/class.github-updater.php' );
+
+if ( ! class_exists( 'Habakiri_Plugin_GitHub_Updater' ) ) {
+	include_once( plugin_dir_path( __FILE__ ) . 'classes/class.github-updater.php' );
+}
 new Habakiri_Plugin_GitHub_Updater( 'habakiri-rocky', __FILE__, 'inc2734' );
 
 class Habakiri_Rocky {
